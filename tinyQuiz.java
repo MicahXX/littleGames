@@ -12,7 +12,7 @@ public class tinyQuiz {
         int minecraftRelease;
 
         int points = 0;
-        int maxPoints = 5; // change this amount based ob the amount of questions you have
+        int maxPoints = 5; // change this amount based on the amount of questions you have
 
         // beginning message of the quiz
         System.out.println("Welcome to my Quiz with 5 little questions about Marcusk and his Discord Server" +

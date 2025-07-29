@@ -12,12 +12,14 @@ public class tinyQuiz {
         int minecraftRelease;
 
         int points = 0;
-        int maxPoints = 5;
+        int maxPoints = 5; // change this amount based ob the amount of questions you have
 
+        // beginning message of the quiz
         System.out.println("Welcome to my Quiz with 5 little questions about Marcusk and his Discord Server" +
                 ", also there are some general questions too.");
         System.out.println();
 
+        // asking if the user wants to start
         System.out.print("Do you want to begin? (y/n) ");
         beginOfTheQuiz = scanner.nextLine();
 
@@ -26,6 +28,7 @@ public class tinyQuiz {
         }
         System.out.println("----------------------");
 
+        // start of the quiz put the questions here
         System.out.print("What is the name of the owner of the youtuber who owns the disc? ");
         nameOfOwner = scanner.nextLine();
 
@@ -112,7 +115,7 @@ public class tinyQuiz {
         scanner.close(); // scanner cant be used again
     }
 
-    private static String normalize(String input) {
+    private static String normalize(String input) { // answer of the user so they can type it with lowercase and spaces
         return input.trim().replaceAll("\\s+", "").toLowerCase();
     }
 }

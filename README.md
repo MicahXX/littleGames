@@ -1,1 +1,1 @@
-# Just a small Quiz I made with my skills I have.
+# Just a small Quiz I made with the skills I have.

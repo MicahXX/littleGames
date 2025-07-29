@@ -1,1 +1,1 @@
-# Just a small Quiz I made with the skills I have.
+# Just a small quiz in Java that I made with the skills I have.

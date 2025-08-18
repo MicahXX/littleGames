@@ -4,6 +4,8 @@ public class tinyQuiz {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // add another variable or change this if you want to make more questions 
+        // and use it in the same format as shown below
         String beginOfTheQuiz;
         String nameOfOwner;
         String nameOfManager;
@@ -19,7 +21,7 @@ public class tinyQuiz {
                 ", also there are some general questions too.");
         System.out.println();
 
-        // asking if the user wants to start
+        // asks if user wants to begin the quiz
         System.out.print("Do you want to begin? (y/n) ");
         beginOfTheQuiz = scanner.nextLine();
 
@@ -28,7 +30,7 @@ public class tinyQuiz {
         }
         System.out.println("----------------------");
 
-        // start of the quiz put the questions here
+        // start of the quiz (put your questions here)
         System.out.print("What is the name of the owner of the youtuber who owns the disc? ");
         nameOfOwner = scanner.nextLine();
 
@@ -115,7 +117,8 @@ public class tinyQuiz {
         scanner.close(); // scanner cant be used again
     }
 
-    private static String normalize(String input) { // answer of the user so they can type it with lowercase and spaces
+    private static String normalize(String input) { // makes it so the user can also type the answer in lowercase or with spaces
         return input.trim().replaceAll("\\s+", "").toLowerCase();
     }
 }
+

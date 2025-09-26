@@ -29,7 +29,6 @@ public class Calculator {
 
     // starter menu
     public void showMenu() {
-        dividingLine();
         System.out.println(RED + "0: Exit");
         System.out.println(BRIGHT_GREEN + "1: Addition" + RESET);
         System.out.println(BRIGHT_GREEN + "2: Subtraction" + RESET);
@@ -140,5 +139,10 @@ public class Calculator {
             result();
         }
         scanner.close();
+    }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        calc.startProgram();
     }
 }

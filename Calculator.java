@@ -5,7 +5,7 @@ public class Calculator {
 
     double n1;
     double n2;
-    String operator;
+    String operator; 
 
     // colours
     public static final String RESET = "\u001B[0m";
@@ -97,7 +97,7 @@ public class Calculator {
         }
     }
 
-    // calculates the result
+    // calculates the result (maybe add more features)
     public void result() {
         switch (operator) {
             case "1":
@@ -146,3 +146,4 @@ public class Calculator {
         calc.startProgram();
     }
 }
+

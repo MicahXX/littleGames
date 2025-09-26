@@ -14,7 +14,7 @@ public class madLibsGame {
         System.out.println("Welcome to my game where you have to add words like nouns " +
                 "and complete the sentences.");
 
-        System.out.print("-------------");
+        System.out.print("-------------"); 
 
         System.out.println("\nToday I went to a " + "<adjective1>" + " zoo.");
         System.out.println("In an exhibit, I saw a " + "<noun1>" + ".");
@@ -44,3 +44,4 @@ public class madLibsGame {
         scanner.close();
     }
 }
+

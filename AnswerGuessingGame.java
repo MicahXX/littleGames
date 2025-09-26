@@ -49,11 +49,11 @@ public class AnswerGuessingGame {
             while (true) {
                 System.out.print(MAGENTA + "Your answer (type 'tip' for a hint or 'skip'): " + RESET);
                 String userInput = sc.nextLine();
-                if (userInput.equalsIgnoreCase("tip") && tipsUsed < 3) {
+                if (userInput.equalsIgnoreCase("tip") && tipsUsed < 3) { // if you change skips amount also adjust it here
                     System.out.println(WHITE + "tip: " + q[2 + tipsUsed] + RESET);
                     divline();
                     tipsUsed++;
-                } else if (userInput.equalsIgnoreCase("tip") && tipsUsed == 3) {
+                } else if (userInput.equalsIgnoreCase("tip") && tipsUsed == 3) { // if you change skips amount also adjust it here
                     System.out.println(WHITE + "OUT OF TIPS" + RESET);
                     divline();
                 } else if (userInput.equalsIgnoreCase("skip")) {
@@ -107,4 +107,5 @@ public class AnswerGuessingGame {
         game.startGame();
         game.questionSystem();
     }
+
 }

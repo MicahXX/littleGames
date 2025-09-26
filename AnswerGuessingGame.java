@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class AnswerGuessingGame {
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in); 
 
     private int points = 0;
     int skipsLeft = 2; // change this amount if you want to allow more skips
@@ -119,3 +119,4 @@ public class AnswerGuessingGame {
         game.questionSystem();
     }
 }
+

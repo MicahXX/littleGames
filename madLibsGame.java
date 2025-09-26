@@ -9,7 +9,7 @@ public class madLibsGame {
         String noun1;
         String adjective2;
         String verb1;
-        String adjective3;
+        String adjective3; 
 
         System.out.println("Welcome to my game where you have to add words like nouns " +
                 "and complete the sentences.");
@@ -44,4 +44,5 @@ public class madLibsGame {
         scanner.close();
     }
 }
+
 

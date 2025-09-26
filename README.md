@@ -1,5 +1,5 @@
 <h1>
-    little Java Programs
+    Java Programs/Games
 </h1>
 
 [![Website](https://img.shields.io/badge/Website-micahcode.com-blue?style=for-the-badge)](https://micahcode.com)

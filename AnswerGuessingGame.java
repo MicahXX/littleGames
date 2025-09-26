@@ -6,7 +6,7 @@ public class AnswerGuessingGame {
     private int points = 0;
     int skipsLeft = 2; // change this amount if you want to allow more skips
 
-    // colours
+    // colours 
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
     public static final String PURPLE = "\u001B[35m";
@@ -109,3 +109,4 @@ public class AnswerGuessingGame {
     }
 
 }
+

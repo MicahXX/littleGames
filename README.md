@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/github/stars/MicahXX/OwnWebsite?style=for-the-badge" alt="Stars Badge"/>
 
 ##  About
-Just some little fun games pr other stuff I do for fun
+Just some little fun games or other stuff I do for fun, that are fun to code.
 
 ##  Links
 - 🌍 [micahcode](https://micahcode.com)

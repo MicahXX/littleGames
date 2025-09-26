@@ -17,12 +17,14 @@ public class Calculator {
     public static final String DARK_BLUE = "\u001B[34m";
     public static final String MAGENTA = "\u001B[95m";
 
-    public void author() {
-        System.out.println(DARK_BLUE + "by MicahCode" + RESET);
+    private void author() {
+        System.out.println(DARK_BLUE + "╔══════════════════════════════╗" + RESET);
+        System.out.println(GOLD + "         by MicahCode         " + RESET);
+        System.out.println(DARK_BLUE + "╚══════════════════════════════╝" + RESET);
     }
 
-    public void dividingLine() {
-        System.out.println(WHITE + "-------------------" + RESET);
+    private void dividingLine() {
+        System.out.println(DARK_BLUE + "══════════════════════════════" + RESET);
     }
 
     // starter menu

@@ -6,7 +6,7 @@ public class AnswerGuessingGame {
     private int points = 0;
     int skipsLeft = 2; // change this amount if you want to allow more skips
 
-    // colours 
+    // colours
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
     public static final String PURPLE = "\u001B[35m";
@@ -43,39 +43,50 @@ public class AnswerGuessingGame {
             int tipsUsed = 0;
             int wrongAnswers = 0;
             System.out.println(WHITE + question + RESET);
-            System.out.println(GOLD + "Skips Left: " + skipsLeft + RESET);
             divline();
 
             while (true) {
+                System.out.println(GOLD + "(Skips Left: " + skipsLeft + ")" + RESET);
                 System.out.print(MAGENTA + "Your answer (type 'tip' for a hint or 'skip'): " + RESET);
                 String userInput = sc.nextLine();
-                if (userInput.equalsIgnoreCase("tip") && tipsUsed < 3) { // if you change skips amount also adjust it here
-                    System.out.println(WHITE + "tip: " + q[2 + tipsUsed] + RESET);
-                    divline();
-                    tipsUsed++;
-                } else if (userInput.equalsIgnoreCase("tip") && tipsUsed == 3) { // if you change skips amount also adjust it here
-                    System.out.println(WHITE + "OUT OF TIPS" + RESET);
-                    divline();
-                } else if (userInput.equalsIgnoreCase("skip")) {
-                    if (skipsLeft > 0) {
-                        System.out.println(RED + "You skipped this question!" + RESET);
-                        divline();
-                        skipsLeft--;
+
+                switch (userInput) {
+                    case "tip":
+                        if (tipsUsed < 3) {
+                            System.out.println(WHITE + "tip: " + q[2 + tipsUsed] + RESET);
+                            divline();
+                            tipsUsed++;
+                        } else if (tipsUsed == 3) {
+                            System.out.println(WHITE + "OUT OF TIPS" + RESET);
+                            divline();
+                        }
                         break;
-                    } else {
-                        System.out.println(WHITE + "No skips left!" + RESET);
-                        divline();
-                    }
+                    case "skip":
+                        if (skipsLeft > 0) {
+                            System.out.println(RED + "You skipped this question!" + RESET);
+                            divline();
+                            skipsLeft--;
+                            break;
+                        } else {
+                            System.out.println(WHITE + "No skips left!" + RESET);
+                            divline();
+                        }
+                        break;
+                    default:
+                        if (userInput.equalsIgnoreCase(q[1])) {
+                            System.out.println(PURPLE + "Congratulations! You guessed it!" + RESET);
+                            divline();
+                            points += 4 - (tipsUsed - wrongAnswers) / 2; // change these values if you want
+                            break;
+                        } else {
+                            wrongAnswers++;
+                            System.out.println(RED + "Wrong..." + RESET);
+                            divline();
+                        }
+                        break;
                 }
-                else if (userInput.equalsIgnoreCase(q[1])) {
-                    System.out.println(PURPLE + "Congratulations! You guessed it!" + RESET);
-                    divline();
-                    points += 4 - (tipsUsed - wrongAnswers) / 2;
+                if (userInput.equalsIgnoreCase(q[1]) || (userInput.equalsIgnoreCase("skip") && skipsLeft >= 0)) {
                     break;
-                } else {
-                    wrongAnswers++;
-                    System.out.println(RED + "Wrong..." + RESET);
-                    divline();
                 }
             }
         }
@@ -107,6 +118,4 @@ public class AnswerGuessingGame {
         game.startGame();
         game.questionSystem();
     }
-
 }
-

@@ -10,7 +10,7 @@ public class tinyQuiz {
         String nameOfOwner;
         String nameOfManager;
         String nameOfTheDeveloper;
-        int ww2Beginning;
+        int ww2Beginning; 
         int minecraftRelease;
 
         int points = 0;
@@ -121,4 +121,5 @@ public class tinyQuiz {
         return input.trim().replaceAll("\\s+", "").toLowerCase();
     }
 }
+
 

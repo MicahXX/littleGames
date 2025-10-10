@@ -12,4 +12,4 @@ You could also see my progression in my coding abilities by the quality and diff
 
 ##  Links
 - [Website](https://micahcode.com)
-- [GitHub @MicahXX](https://github.com/MicahXX)
+- [GitHub](https://github.com/MicahXX)
